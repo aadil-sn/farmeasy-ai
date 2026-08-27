@@ -4,6 +4,83 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "DM Mono", ui-monospace, monospace;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+}
+
+:root {
+  --background: #f4f6f4;
+  --foreground: #102017;
+  --muted: #e9eeea;
+  --muted-foreground: #66736b;
+  --border: #dce4de;
+  --mint: #c6ead6;
+  --spruce: #153e2a;
+  --ink: #102017;
+  --blush: #f3c9c6;
+  --sky: #c9def3;
+  --butter: #f7e6a3;
+  --paper: #fbfcfb;
+}
+
+* { border-color: var(--border); }
+
+html { background: var(--background); }
+
+body {
+  min-width: 320px;
+  background:
+    radial-gradient(circle at 92% 7%, rgba(201, 222, 243, 0.64) 0 125px, transparent 126px),
+    radial-gradient(circle at 3% 72%, rgba(243, 201, 198, 0.48) 0 180px, transparent 181px),
+    var(--background);
+  color: var(--foreground);
+  font-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
+}
+
+button, input, select, textarea { font: inherit; }
+button { cursor: pointer; }
+
+::selection { background: var(--blush); color: var(--ink); }
+
+.app-shell { min-height: 100vh; }
+.app-container { width: min(1440px, calc(100% - 40px)); margin: 0 auto; }
+.soft-grid {
+  background-image: linear-gradient(rgba(16,32,23,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(16,32,23,.035) 1px, transparent 1px);
+  background-size: 34px 34px;
+}
+.eyebrow { font-family: "DM Mono", monospace; font-size: 10px; letter-spacing: .15em; text-transform: uppercase; color: #607168; }
+.mono { font-family: "DM Mono", monospace; }
+.hairline { border: 1px solid rgba(16,32,23,.12); }
+.card-surface { background: rgba(251,252,251,.84); border: 1px solid rgba(16,32,23,.11); box-shadow: 0 12px 26px rgba(23,49,33,.055); }
+.icon-tile { display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 10px; }
+.route-map-shell { position: relative; overflow: hidden; min-height: 355px; background: #dfe8e2; }
+.route-map { height: 355px !important; filter: saturate(.65) contrast(.96); }
+.route-map-label { position: absolute; z-index: 2; left: 18px; top: 18px; display: flex; gap: 10px; align-items: center; padding: 11px 13px; background: rgba(251,252,251,.94); box-shadow: 0 8px 24px rgba(23,49,33,.14); font-size: 12px; }
+.route-map-label strong, .route-map-label small { display: block; }
+.route-map-label small { color: #6c7a72; margin-top: 2px; }
+.route-icon { display: grid; place-items: center; width: 28px; height: 28px; background: var(--mint); }
+.route-map-pin { position: absolute; z-index: 2; right: 16px; bottom: 16px; display: flex; align-items: center; gap: 6px; padding: 8px 10px; background: #153e2a; color: #fff; font-size: 11px; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .reveal { animation: reveal .5s cubic-bezier(.23,1,.32,1) both; }
+  .reveal-delay { animation: reveal .5s .08s cubic-bezier(.23,1,.32,1) both; }
+  @keyframes reveal { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+}
+
+@media (max-width: 640px) {
+  .app-container { width: min(100% - 24px, 1440px); }
+  .route-map, .route-map-shell { min-height: 270px; height: 270px !important; }
+}
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -111,6 +188,34 @@
   --sidebar-accent-foreground:  oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.488 0.243 264.376);
+}
+
+:root {
+  --primary: #153e2a;
+  --primary-foreground: #ffffff;
+  --background: #f4f6f4;
+  --foreground: #102017;
+  --card: #fbfcfb;
+  --card-foreground: #102017;
+  --popover: #fbfcfb;
+  --popover-foreground: #102017;
+  --secondary: #e9eeea;
+  --secondary-foreground: #102017;
+  --muted: #e9eeea;
+  --muted-foreground: #66736b;
+  --accent: #e9eeea;
+  --accent-foreground: #102017;
+  --border: #dce4de;
+  --input: #dce4de;
+  --ring: #153e2a;
+  --sidebar: #f4f6f4;
+  --sidebar-foreground: #102017;
+  --sidebar-primary: #153e2a;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #e9eeea;
+  --sidebar-accent-foreground: #102017;
+  --sidebar-border: #dce4de;
+  --sidebar-ring: #153e2a;
 }
 
 @layer base {

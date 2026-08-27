@@ -1,6 +1,6 @@
 import { eq } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, users } from "../drizzle/schema";
+import { InsertUser, marketplaceEvents, users } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
 let _db: ReturnType<typeof drizzle> | null = null;
@@ -89,4 +89,14 @@ export async function getUserByOpenId(openId: string) {
   return result.length > 0 ? result[0] : undefined;
 }
 
-// TODO: add feature queries here as your schema grows.
+export async function recordMarketplaceEvent(event: {
+  actorRole: "farmer" | "buyer" | "fpo";
+  eventType: "lot_published" | "lot_updated" | "lot_removed" | "farmer_verified" | "farmer_rejected" | "offer_created" | "offer_accepted" | "offer_rejected" | "aggregation_approved" | "order_advanced";
+  referenceId: string;
+  summary: string;
+}) {
+  const db = await getDb();
+  if (!db) return { recorded: false };
+  await db.insert(marketplaceEvents).values(event);
+  return { recorded: true };
+}

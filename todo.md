@@ -1,0 +1,25 @@
+# Project TODO
+
+- [x] Define FarmEasy AI's role vocabulary, transparent pricing rules, and prototype marketplace data.
+- [x] Apply the Scandinavian design system with pale cool-gray surfaces, bold black typography, and pastel geometric accents.
+- [x] Build the shared application shell with accessible navigation, role switching, responsive layouts, and route registration.
+- [x] Create a Farmer dashboard with stock, price intelligence, matched buyers, earnings, active orders, delivery, payments, and recommendations.
+- [x] Create a Buyer dashboard with requirement posting, searchable crop lots, matching, orders, delivery, and payments.
+- [x] Create an FPO operations dashboard with farmer validation, aggregate supply, demand matching, logistics coordination, and marketplace metrics.
+- [x] Implement crop-lot publishing with add and edit interactions, quantity updates, availability, and transparent cost views.
+- [x] Implement buyer offer and requirement posting interactions with transparent cost views.
+- [x] Implement FPO supply aggregation proposal review with farmer contributions, weighted prices, locations, and quality details.
+- [x] Implement the complete simulated order lifecycle, including confirmation, collection, transit, delivery, receipt, and settlement status progression.
+- [x] Show a transparent price breakdown on every listing and order, including crop price, logistics, FPO service fee, buyer price, and farmer payout.
+- [x] Add AI decision-support views for demand forecasts, price intelligence, matching rationale, sell-time advice, and what-if profit simulation.
+- [x] Add third-party logistics coordination views with interactive pickup/delivery map context, route distance, consolidation, and capacity details.
+- [x] Add in-app notification center states for offers, collections, dispatches, deliveries, and payment changes.
+- [x] Add external regional signal integration for live weather and authorized mandi-price comparison with loading and unavailable states.
+- [x] Update the database schema and server procedures for durable marketplace data where appropriate.
+- [x] Add automated tests covering transparent payout calculations and external price-provider authorization.
+- [x] Verify the desktop and mobile presentation, resolve functional issues, and save the completed project checkpoint.
+- [x] Add an FPO farmer-verification workspace with approve and reject controls.
+- [x] Add availability controls and remove actions to crop-lot management forms.
+- [x] Add buyer-offer records with actionable farmer acceptance or rejection flow.
+- [x] Persist key marketplace workflow updates through database-backed server procedures.
+- [x] Re-verify the completed workflows and save the final project checkpoint.
