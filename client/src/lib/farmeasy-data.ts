@@ -80,7 +80,7 @@ export type ActivityNotification = {
 };
 
 export const cropLots: CropLot[] = [
-  { id: "LOT-042", product: "Tomatoes", category: "Vegetables", quantity: 800, unit: "kg", farmer: "Asha Naik", village: "Kolar", harvestDate: "Today", quality: "Grade A", availability: "Available", agreedPrice: 25.5, logistics: 2.2, handling: 0.5, fee: 0.7, distance: 42, verified: true },
+  { id: "LOT-042", product: "Tomatoes", category: "Vegetables", quantity: 800, unit: "kg", farmer: "Kamil", village: "Kolar", harvestDate: "Today", quality: "Grade A", availability: "Available", agreedPrice: 25.5, logistics: 2.2, handling: 0.5, fee: 0.7, distance: 42, verified: true },
   { id: "LOT-039", product: "Tomatoes", category: "Vegetables", quantity: 450, unit: "kg", farmer: "Ravi Kumar", village: "Malur", harvestDate: "Today", quality: "Grade A", availability: "Available", agreedPrice: 25.5, logistics: 2.0, handling: 0.5, fee: 0.7, distance: 36, verified: true },
   { id: "LOT-031", product: "Tomatoes", category: "Vegetables", quantity: 250, unit: "kg", farmer: "Latha Devi", village: "Hoskote", harvestDate: "Tomorrow", quality: "Grade A", availability: "Harvesting", agreedPrice: 25.5, logistics: 2.5, handling: 0.5, fee: 0.7, distance: 53, verified: true },
   { id: "LOT-051", product: "Onions", category: "Vegetables", quantity: 1200, unit: "kg", farmer: "Manjunath R.", village: "Chintamani", harvestDate: "Aug 30", quality: "Grade A", availability: "Available", agreedPrice: 29.0, logistics: 1.9, handling: 0.4, fee: 0.6, distance: 68, verified: true },
@@ -114,7 +114,7 @@ export const initialBuyerOffers: BuyerOffer[] = [
 ];
 
 export const initialOrders: FarmEasyOrder[] = [
-  { id: "ORD-2048", product: "Tomatoes", quantity: 1500, buyers: "FreshBasket Kitchens", status: "Collection scheduled", payment: "Paid", producers: ["Asha Naik · 800 kg", "Ravi Kumar · 450 kg", "Latha Devi · 250 kg"], agreedPrice: 25.5, logistics: 2.1, handling: 0.5, fee: 0.7, route: "Kolar → Malur → Hoskote → Indiranagar", eta: "Tomorrow, 10:00" },
+  { id: "ORD-2048", product: "Tomatoes", quantity: 1500, buyers: "FreshBasket Kitchens", status: "Collection scheduled", payment: "Paid", producers: ["Kamil · 800 kg", "Ravi Kumar · 450 kg", "Latha Devi · 250 kg"], agreedPrice: 25.5, logistics: 2.1, handling: 0.5, fee: 0.7, route: "Kolar → Malur → Hoskote → Indiranagar", eta: "Tomorrow, 10:00" },
   { id: "ORD-2045", product: "Green beans", quantity: 250, buyers: "Green Table Market", status: "In transit", payment: "Delivery confirmed", producers: ["Lakshmi P. · 250 kg"], agreedPrice: 46, logistics: 2.4, handling: 0.8, fee: 1.0, route: "Vemgal → Koramangala", eta: "Today, 15:40" },
   { id: "ORD-2039", product: "Onions", quantity: 900, buyers: "Namma Retail", status: "Delivered", payment: "Settled", producers: ["Manjunath R. · 900 kg"], agreedPrice: 29, logistics: 1.9, handling: 0.4, fee: 0.6, route: "Chintamani → Whitefield", eta: "Completed" },
 ];
