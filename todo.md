@@ -24,3 +24,6 @@
 - [x] Persist key marketplace workflow updates through database-backed server procedures.
 - [x] Re-verify the completed workflows and save the final project checkpoint.
 - [x] Replace the Farmer demo name Asha Naik with Kamil throughout the interface and prototype data.
+- [x] Add an Instagram-inspired FarmEasy AI login page using the existing secure Manus OAuth entry flow.
+- [x] Replace unused username/password fields with an honest OAuth-first sign-in presentation.
+- [x] Re-verify the corrected login experience and save its final checkpoint.
